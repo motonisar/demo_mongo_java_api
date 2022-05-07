@@ -1,4 +1,4 @@
-package com.demo_mongo_java_api.Controller;
+package com.demo_mongo_java_api.controller;
 
 import com.demo_mongo_java_api.dto.Student;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,11 +11,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.rmi.ServerException;
 import java.util.List;
 
 @RestController
 public class StudentRestController {
+    @Autowired
+    MongoRepository repository;
 
     @GetMapping("allstudents")
     public ResponseEntity<List<Student>> getStudents() {
@@ -23,9 +24,6 @@ public class StudentRestController {
         return new ResponseEntity<>(repository.findAll(), HttpStatus.OK);
 
     }
-
-    @Autowired
-    MongoRepository repository;
 
     @PostMapping(path = "addstudent",
             consumes = MediaType.APPLICATION_JSON_VALUE,
@@ -38,6 +36,7 @@ public class StudentRestController {
             return new ResponseEntity<>(student, HttpStatus.CREATED);
         }
     }
+
 
 
 }
