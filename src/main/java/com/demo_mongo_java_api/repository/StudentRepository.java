@@ -9,4 +9,5 @@ import java.util.Optional;
 public interface StudentRepository extends MongoRepository<Student, String> {
 
     Student findStudentByEmail(String email);
+     Student deleteByEmail(String email);
 }

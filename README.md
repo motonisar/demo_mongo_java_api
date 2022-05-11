@@ -15,6 +15,10 @@ localhost:8080/api/v1/getstudent/{email}
 Add one student
 localhost:8080/api/v1/addstudent
 
+@DeleteMapping
+Delete a Student by id
+localhost:8080/api/v1/deletestudent/{email}
+
 Sample Student Json:
 Please refer to the Sample.json file in the project.
 

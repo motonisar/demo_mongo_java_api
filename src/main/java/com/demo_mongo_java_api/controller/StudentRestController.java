@@ -58,7 +58,18 @@ public class StudentRestController {
         }
         return new ResponseEntity<>(student, HttpStatus.CREATED);
     }
-}
+
+    @DeleteMapping("/api/v1/deletestudent/{email}")
+    public ResponseEntity<Student> deleteStudent(@PathVariable String email) {
+        Student student = studentRepository.findStudentByEmail(email);
+        if (student == null) {
+            return new ResponseEntity<>(studentRepository.deleteByEmail(email), HttpStatus.NOT_FOUND);}
+            else{
+                return new ResponseEntity<>(studentRepository.deleteByEmail(email), HttpStatus.ACCEPTED);
+            }
+        }
+    }
+
 
 
 
