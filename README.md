@@ -26,5 +26,5 @@ Please refer to the Sample.json file in the project.
 Prerequisite:
 Need a running mongodb which is already available.
 If not available , 
-please use docker-compose file to spinup a mongodb running on docker. 
-CMD > docker-compose -d -f docker.compose.yaml up 
+please use   docker-compose file to spinup a mongodb running on docker. 
+CMD > docker-compose -f docker-compose.yaml up --detach 
