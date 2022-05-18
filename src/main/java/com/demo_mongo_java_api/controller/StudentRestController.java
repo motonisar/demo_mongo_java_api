@@ -1,20 +1,14 @@
 package com.demo_mongo_java_api.controller;
 
 import com.demo_mongo_java_api.dto.Student;
-import com.demo_mongo_java_api.repository.StudentRepository;
 import com.demo_mongo_java_api.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ImportResource;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.event.ListDataEvent;
 import java.util.List;
 
 @RestController

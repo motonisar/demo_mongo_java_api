@@ -3,7 +3,6 @@ package com.demo_mongo_java_api.service;
 import com.demo_mongo_java_api.dto.Student;
 import com.demo_mongo_java_api.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
